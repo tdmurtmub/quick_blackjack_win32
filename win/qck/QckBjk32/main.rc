@@ -1,0 +1,64 @@
+#include "windres.h"
+#include "quickWin.rc"
+#include "accelerators.rc"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 3, 0, 17, 1
+PRODUCTVERSION 3, 0, 17, 1
+FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "LegalCopyright", "Copyright © 1998-2017 by Wesley Steiner\000"
+			VALUE "CompanyName", "Wesley Steiner\000"
+			VALUE "FileVersion", "3.0.17.1\000"
+			VALUE "ProductVersion", "3.0.17.1\000"
+			VALUE "FileDescription", "Quick Blackjack Application\000"
+			VALUE "InternalName", "Quick Blackjack\000"
+			VALUE "OriginalFilename", "QuickBlackjack.exe\000"
+			VALUE "ProductName", "Quick Blackjack for Windows\000"
+		END
+
+	END
+
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 1033, 1200
+	END
+
+END
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+MAINICON ICON DISCARDABLE "res\\main.ICO"
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    17301                   "Recommendation"
+    17303                   "Card Counting"
+    17304                   "Draw & Stand (Hard)"
+    17308                   "&Recommended Bet"
+    17311                   "Draw & Stand (Soft)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    17312                   "Doubling Down (Hard)"
+    17313                   "Doubling Down (Soft)"
+    17317                   "&Card Count"
+    17320                   "Odds &Dealer Holds"
+    17321                   "&Simulation..."
+    17322                   "Splitting"
+    17323                   "&Mode of Play..."
+    17324                   "Doubling Down (Soft - Mult)"
+END
+
